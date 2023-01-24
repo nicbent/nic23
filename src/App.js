@@ -2,7 +2,6 @@ import React, { useRef, useLayoutEffect } from 'react'
 import { OrbitControls, CameraShake, Text, Html } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
-import { useControls } from 'leva'
 import { Particles } from './Particles'
 
 import { gsap } from "gsap";
