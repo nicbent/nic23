@@ -1,12 +1,16 @@
+import * as THREE from 'three'
+
 import React, { useRef, useLayoutEffect } from 'react'
 import { OrbitControls, CameraShake, Text, Html } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, extend } from '@react-three/fiber'
 
 import { useControls } from 'leva'
 import { Particles } from './Particles'
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+
+extend(THREE)
 
 gsap.registerPlugin(TextPlugin);
 
