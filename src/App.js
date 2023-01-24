@@ -40,10 +40,11 @@ function TypeWriter() {
   const container = useRef();
   const text = useRef();
 
-  const words = ['veloper', 'signer']
 
   useLayoutEffect(() => {
+    
     const ctx = gsap.context(() => {
+      const words = ['veloper', 'signer']
 
       let tlMaster = gsap.timeline({ repeat: -1 });
 
