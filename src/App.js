@@ -42,17 +42,16 @@ function TypeWriter() {
 
 
   useLayoutEffect(() => {
-    
     const ctx = gsap.context(() => {
       const words = ['veloper', 'signer']
 
       let tlMaster = gsap.timeline({ repeat: -1 });
 
-      words.map((word) => {
+        words.forEach ((word, index) => {
         let tlText = gsap.timeline({ repeat: 1, repeatDelay: 1.5, yoyo: true });
         tlText.to(text.current, { duration: 1, text: word })
         tlMaster.add(tlText)
-      })
+      });
 
     }, container);
 
