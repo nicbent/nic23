@@ -14,13 +14,12 @@ export default function App() {
   const props = useControls({
     focus: { value: 5.1, min: 3, max: 7, step: 0.01 },
     speed: { value: 1, min: 0.1, max: 100, step: 0.1 },
-    aperture: { value: 7.0, min: 1, max: 7.0, step: 0.1 },
-    fov: { value: 50, min: 0, max: 200 },
+    aperture: { value: 4.7, min: 1, max: 5.0, step: 0.1 },
     curl: { value: 0.17, min: 0.01, max: 0.5, step: 0.01 }
   })
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }} gl={{ alpha: true, antialias: true }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: 75 }} gl={{ alpha: true, antialias: true }}>
         <OrbitControls makeDefault autoRotate autoRotateSpeed={0.5} enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
         <CameraShake yawFrequency={1} maxYaw={0.05} pitchFrequency={1} maxPitch={0.05} rollFrequency={0.5} maxRoll={0.5} intensity={0.2} />
         <Text fontSize={0.75}>NB</Text>
@@ -47,7 +46,7 @@ function TypeWriter() {
 
       let tlMaster = gsap.timeline({ repeat: -1 });
 
-        words.forEach ((word, index) => {
+        words.forEach ((word) => {
         let tlText = gsap.timeline({ repeat: 1, repeatDelay: 1.5, yoyo: true });
         tlText.to(text.current, { duration: 1, text: word })
         tlMaster.add(tlText)
