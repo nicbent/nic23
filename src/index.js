@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './fonts/ABCFavorit-Regular-Trial.woff2';
-import './fonts/SyndicatGrotesk-Regular.woff2';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

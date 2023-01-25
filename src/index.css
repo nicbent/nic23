@@ -5,6 +5,7 @@
 @import url("https://use.typekit.net/xkp6dmv.css");
 
 
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +18,8 @@ body,
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: Usual, sans-serif;
+
 }
 
 body {
@@ -32,4 +35,9 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.usual {
+  font-family: Usual, sans-serif;
+
 }
